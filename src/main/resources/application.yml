@@ -1,0 +1,14 @@
+zuul:
+  routes:
+    greeting:
+      path: /greeting
+      service-id: forward:/
+    goodbye:
+      path: /goodbye/**
+      url: http://localhost:8080/goodbye
+    seeya:
+      path: /seeya/**
+      url: http://localhost:8080/seeya
+
+server:
+  port: 9002
